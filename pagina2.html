@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Galeria</title>
+<link rel="stylesheet" href="estilos.css" type="text/css"/>
+</head>
+
+<body>
+<div id="contenedor">
+
+<div id="cabecera">
+<img src="imagenes/mundo.png" id="imglogo">
+<h1>Galeria</h1>
+</div>
+<div id="ss">
+<div id="alinear">
+
+
+<div class="izquierdo"> 
+<a href="index.html">lugares</a>
+</div>
+<style>
+#contenedor{
+	border:1px solid #00e5ff;
+
+	
+}
+
+#cabecera{
+	
+	background-color:#00e5ff;
+	padding: 25px;
+	text-align: center;
+}
+
+.cuerpo{
+	background-color:#ff6f00;
+	padding: 10px;
+	text-align: justify;
+	height: 100%;
+	margin-top:7px;
+	float:left;
+	width:600%;
+}
+
+.derecho{
+	float:right;
+	width:0%;
+	text-align:center;
+	padding:20px;
+	background-color:#d500f9;
+	height: 100%;
+	margin-top:7px;
+}
+
+
+.izquierdo{
+	float:left;
+	width:12%;
+	text-align:center;
+	padding:20px;
+	background-color:#d500f9;
+	height: 100%;
+	margin-top:7px;
+}
+
+
+.pie{
+	background-color:#87ceeb;
+	text-align:center;
+	padding: 10px;
+}
+
+
+#alinear{
+	display: flex;
+	margin: 5px;
+}
+
+#ss{
+	overflow:auto;
+}
+
+
+
+
+
+#imglogo{
+	max-width:8%;
+	width:auto;
+	height:auto;
+	float:left;
+}
+h1,h2{
+	font-family:cursive;
+	text-align:center;
+}
+
+p{
+	font-family: verdana;
+	text-align:justify;
+	
+}
+
+#imgArtist{
+	max-width:90%;
+	max-height:85%;
+}
+
+.izquierdo a{
+	background-color:blue(0.11turn,100%,50%,0.5);
+	padding:8px;
+	margin-top:2px;
+	display:block;
+	width:100%;
+	font-weight:bold;
+	text-align:center;
+	text-decoration:none;
+}
+
+
+.izquierdo a:hover{
+	background-color:hsla(0.5turn,100%,50%,0.2);
+}
+
+body {
+            padding: 0;
+            margin: 0;
+            -webkit-perspective: 1000;
+			background-image: url("https://indicepolitico.com/wp-content/uploads/2023/02/banderas-paises-jpg.jpg");
+		    min-height: 100vh;
+            display: flex;
+  flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: calibri;
+        }
+		
+		table, th, td {  /* estilo a la tabla creada en la pagina galeria.html*/
+  border: 2px solid blue; /*Bordes  con un grosor de 7px, con un color solido azul*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.class1{
+		width:300px; 
+		height:200px;
+}
+
+@media only screen and (max-width:620px){
+	.izquierdo, .cuerpo, .derecho, .img, .video, iframe{
+		width:100%;
+		height:auto;
+	}
+}
+</style>
+
+<div class="cuerpo">
+
+<table>
+  <tr>
+    <td><img src="imagenes/roma.jpg" class="img class1"></img></td>
+    <td><img src="imagenes/egipto.jpeg" class="img class1"></img></td>
+  
+  </tr>
+  <tr>
+    <td><img src="imagenes/varias.jpg" class="img class1"></img></td>
+    <td><img src="imagenes/inglaterra.jpg" class="img class1"></img></td>
+  
+  </tr>
+  <tr>
+    <td><img src="imagenes/peru.jpeg" class="img class1"></img></td>
+    <td><img src="imagenes/paris.jpeg" class="img class1"></img></td>
+	
+	</tr>
+  <tr>
+    <td><img src="imagenes/por.jpg" class="img class1"></img></td>
+    <td><img src="imagenes/10.jpeg" class="img class1"></img></td>
+    
+  </tr>
+</table>
+
+
+<div id="carrusel">
+  <button id="anterior"><</button>
+  <img id="imagen" src="imagenes/por.jpg" alt="Foto" />
+  <button id="siguiente">></button>
+</div>
+
+</div>
+<div class="derecho"> </div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.050630147!2d-74.30917090094201!3d40.69719334626288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNueva%20York%2C%20EE.%20UU.!5e0!3m2!1ses!2smx!4v1744152535203!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+
+<div class="pie">
+<h4>Pagina Creada por: <br> Ledesma Angel Marco Antonio y Guadalupe Abigail Moreno Vazquez 603</<h4>
+</div>
+
+
+</div>
+
+<script>
+  const imagenes = ['imagenes/roma.jpg', 'imagenes/egipto.jpeg',"imagenes/varias.jpg","imagenes/inglaterra.jpg","imagenes/peru.jpeg","imagenes/paris.jpeg"]; // Cambia por tus imágenes
+  let indice = 0;
+
+  const img = document.getElementById('imagen');
+  const anterior = document.getElementById('anterior');
+  const siguiente = document.getElementById('siguiente');
+
+  anterior.addEventListener('click', () => {
+    indice = (indice - 1 + imagenes.length) % imagenes.length;
+    img.src = imagenes[indice];
+  });
+
+  siguiente.addEventListener('click', () => {
+    indice = (indice + 1) % imagenes.length;
+    img.src = imagenes[indice];
+  });
+</script>
+
+
+
+</body>
+<html>

@@ -1,0 +1,225 @@
+#contenedor{
+	border:0px solid blue;
+
+	
+}
+
+#cabecera{
+	
+	background-color:blue;
+	padding: 30px;
+	text-align: center;
+}
+
+.cuerpo{
+	background-color:red;
+	padding: 10px;
+	text-align: justify;
+	height: 100%;
+	margin-top:7px;
+	float:left;
+	width:800%;
+}
+
+.derecho{
+	float:right;
+	width:5%;
+	text-align:center;
+	padding:20px;
+	background-color:yellow;
+	height: 100%;
+	margin-top:7px;
+}
+
+
+.izquierdo{
+	float:left;
+	width:300%;
+	text-align:center;
+	padding:20px;
+	background-color:yellow;
+	height: 100%;
+	margin-top:7px;
+}
+
+
+.pie{
+	background-color:blue;
+	text-align:center;
+	padding: 10px;
+}
+
+
+#alinear{
+	display: flex;
+	margin: 7px;
+}
+
+#ss{
+	overflow:auto;
+}
+
+
+
+
+
+#imglogo{
+	max-width:8%;
+	width:auto;
+	height:auto;
+	float:left;
+}
+h1,h2{
+	font-family:cursive;
+	text-align:center;
+}
+
+p{
+	font-family: verdana;
+	text-align:justify;
+	
+}
+
+#imgArtist{
+	max-width:90%;
+	max-height:85%;
+}
+
+.izquierdo a{
+	background-color:blue(0.11turn,100%,50%,0.5);
+	padding:8px;
+	margin-top:2px;
+	display:block;
+	width:100%;
+	font-weight:bold;
+	text-align:center;
+	text-decoration:none;
+}
+
+
+.izquierdo a:hover{
+	background-color:hsla(0.5turn,100%,50%,0.2);
+}
+
+body {
+            padding: 0;
+            margin: 0;
+            -webkit-perspective: 1000;
+			background-image: url("https://indicepolitico.com/wp-content/uploads/2023/02/banderas-paises-jpg.jpg");
+		    min-height: 100vh;
+            display: flex;
+  flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: calibri;
+        }
+		
+@media only screen and (max-width:620px){
+	.izquierdo, .cuerpo, .derecho, .img, .video, iframe{
+		width:100%;
+		height:auto;
+	}
+}
+
+
+
+
+
+#carrusel {
+	
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ff6f00;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+  max-width: 100%;
+  box-sizing: border-box;
+
+}
+
+#carrusel img {
+  width: 300px;
+  height: auto;
+  max-width: 300px;  
+  border-radius: 12px;
+  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#carrusel button {
+  font-size: 2rem;
+  background-color: #fff;
+  
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: background-color 0.2s;
+}
+
+#carrusel button:hover {
+  background-color: #ddd;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  #alinear {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .izquierdo, .derecho, .cuerpo {
+    float: none;
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  #carrusel img {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #imglogo {
+    max-width: 20%;
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #cabecera h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .cuerpo p {
+    font-size: 15px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .class1 {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #carrusel {
+    flex-direction: column;
+  }
+
+  #carrusel img {
+    max-width: 90%;
+  }
+}
